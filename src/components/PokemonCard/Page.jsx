@@ -60,12 +60,12 @@ const PokemonCard = ({ id, name, image, type, weight, height, stats, statsName, 
                                     <div className="base-stats flex flex-row">
                                         <div className="text-center px-12 my-3">
                                             {statsName.map((stats) => (
-                                                <h3>{stats}</h3>
+                                                <h3 key={id}>{stats}</h3>
                                             ))}
                                         </div>
                                         <div className="text-center px-12 my-3">
                                             {stats.map((stats) => (
-                                                <h3>{stats}</h3>
+                                                <h3 key={id}>{stats}</h3>
                                             ))}
                                         </div>
                                     </div>
@@ -95,7 +95,7 @@ const PokemonCard = ({ id, name, image, type, weight, height, stats, statsName, 
                                     <h3>Weight</h3>
                                     <h3>Height</h3>
                                     {statsName.map((stats) => (
-                                        <h3>{stats}</h3>
+                                        <h3 key={id}>{stats}</h3>
                                     ))}
                                 </div>
                                 <div className="text-center px-12 my-3">
@@ -103,7 +103,7 @@ const PokemonCard = ({ id, name, image, type, weight, height, stats, statsName, 
                                     <h3 className="text-lowercase">{weight} LBS</h3>
                                     <h3 className="text-lowercase">{height} CM</h3>
                                     {stats.map((stats) => (
-                                        <h3>{stats}</h3>
+                                        <h3 key={id}>{stats}</h3>
                                     ))}
                                 </div>
                             </div>
